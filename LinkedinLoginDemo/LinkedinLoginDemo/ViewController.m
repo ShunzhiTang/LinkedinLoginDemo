@@ -8,9 +8,16 @@
 
 #import "ViewController.h"
 #import <linkedin-sdk/LISDK.h>
+#import "TSZSiteRequestModel.h"
+
+#import "TSZLinkedInModel.h"
+#import "subStringFromString.h"
 
 @interface ViewController ()
 
+@property (nonatomic ,strong) TSZLinkedInModel *linkedModel;
+
+@property (nonatomic ,strong) TSZSiteRequestModel *resquestModel;
 
 @end
 
@@ -42,6 +49,7 @@
         NSLog(@"returnState = %@",returnState);
 //
         [self getInfo];
+        
 //        LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
 //        
 //         NSLog(@"value=%@ isvalid=%@",[session value],[session isValid] ? @"YES" : @"NO");
@@ -66,6 +74,19 @@
     
 }
 
+/*
+ 
+ {
+ "firstName": "Mobobox",
+ "headline": "Mobobox at Mobobox",
+ "id": "Q4UK11pOsx",
+ "lastName": "Mobobox",
+ "siteStandardProfileRequest": {"url": "https://www.linkedin.com/profile/view?id=AAoAABxMN6oB2h2MJcDZQi5YrNevgw-FyPplHng&authType=name&authToken=y50Q&trk=api*a4774081*s5090721*"}
+ }
+ 
+ */
+
+
 - (void)getInfo{
     
     NSString *urlStr = @"https://api.linkedin.com/v1/people/~";
@@ -74,17 +95,50 @@
         
         [[LISDKAPIHelper sharedInstance] getRequest:urlStr
                                             success:^(LISDKAPIResponse *response) {
-                                                // do something with response
+                                                
+                                                NSError *error = nil;
                                                 
                                                 NSLog(@" %@" , response.data);
-                                                NSLog(@" headers = %@" , response.headers);
+//                                                NSLog(@" headers = %@" , response.headers);
+                                                
+//                                                NSString *str = [subStringFromString getString:response.data fromStr:@"{" toStr:@"}"];
+//                                                
+//                                                NSString *strUrl = [subStringFromString getString:str fromStr:@"{" toStr:@"}"];
+                                                
+                                                NSData *data = [response.data  dataUsingEncoding:NSUTF8StringEncoding];
+                                                
+                                                
+                                                id  obj = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+                                                
+                                                
+                                                NSDictionary *dict = (NSDictionary *)obj;
+                                                
+                                                self.linkedModel = [[TSZLinkedInModel alloc]initWithLinkedinModelDict:dict];
+                                                
+                                                
+//                                                self.resquestModel = self.linkedModel.siteStandardProfileRequest;
+                                                
+                                                NSDictionary  *dictRes= (NSDictionary *) self.linkedModel.siteStandardProfileRequest;
+                                                
+                                                self.resquestModel = [[TSZSiteRequestModel alloc] initWithTSZSiteModelDict:dictRes];
+                                                
+                                                
+                                                self.linkedModel.siteStandardProfileRequest = self.resquestModel;
+                                                
+                                                
+                                                NSLog(@"url = %@" , self.linkedModel.siteStandardProfileRequest.url);
+                                                
+                                                NSLog(@"headline = %@" , self.linkedModel.headline);
+                                                NSLog(@"first = %@" , self.linkedModel.firstName);
+//                                                self.linkedModel =
+                                                
                                             }
                                               error:^(LISDKAPIError *apiError) {
                                                   
                                                   NSLog(@"  error = %@"  ,apiError);
                                               }];
-        
     };
+    
 }
 
 

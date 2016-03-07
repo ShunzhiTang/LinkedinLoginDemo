@@ -14,6 +14,10 @@
 		24DAEF161C8D25B8002BE07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DAEF151C8D25B8002BE07C /* Assets.xcassets */; };
 		24DAEF191C8D25B8002BE07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DAEF171C8D25B8002BE07C /* LaunchScreen.storyboard */; };
 		24DAEF211C8D30BB002BE07C /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEF201C8D30BB002BE07C /* linkedin-sdk.framework */; };
+		24DAEF261C8D91CF002BE07C /* TSZLinkedInModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DAEF251C8D91CF002BE07C /* TSZLinkedInModel.m */; };
+		24DAEF291C8D933D002BE07C /* TSZSiteRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DAEF281C8D933D002BE07C /* TSZSiteRequestModel.m */; };
+		24DAEF2D1C8DA085002BE07C /* NSString+TSZSubStringWithChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DAEF2C1C8DA085002BE07C /* NSString+TSZSubStringWithChar.m */; };
+		24DAEF331C8DA8D5002BE07C /* subStringFromString.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DAEF321C8DA8D5002BE07C /* subStringFromString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,14 @@
 		24DAEF181C8D25B8002BE07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24DAEF1A1C8D25B8002BE07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24DAEF201C8D30BB002BE07C /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
+		24DAEF241C8D91CF002BE07C /* TSZLinkedInModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZLinkedInModel.h; sourceTree = "<group>"; };
+		24DAEF251C8D91CF002BE07C /* TSZLinkedInModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZLinkedInModel.m; sourceTree = "<group>"; };
+		24DAEF271C8D933D002BE07C /* TSZSiteRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZSiteRequestModel.h; sourceTree = "<group>"; };
+		24DAEF281C8D933D002BE07C /* TSZSiteRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZSiteRequestModel.m; sourceTree = "<group>"; };
+		24DAEF2B1C8DA085002BE07C /* NSString+TSZSubStringWithChar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TSZSubStringWithChar.h"; sourceTree = "<group>"; };
+		24DAEF2C1C8DA085002BE07C /* NSString+TSZSubStringWithChar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TSZSubStringWithChar.m"; sourceTree = "<group>"; };
+		24DAEF311C8DA8D5002BE07C /* subStringFromString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subStringFromString.h; sourceTree = "<group>"; };
+		24DAEF321C8DA8D5002BE07C /* subStringFromString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = subStringFromString.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +74,19 @@
 		24DAEF081C8D25B8002BE07C /* LinkedinLoginDemo */ = {
 			isa = PBXGroup;
 			children = (
+				24DAEF271C8D933D002BE07C /* TSZSiteRequestModel.h */,
+				24DAEF281C8D933D002BE07C /* TSZSiteRequestModel.m */,
+				24DAEF241C8D91CF002BE07C /* TSZLinkedInModel.h */,
+				24DAEF251C8D91CF002BE07C /* TSZLinkedInModel.m */,
 				24DAEF0C1C8D25B8002BE07C /* AppDelegate.h */,
 				24DAEF0D1C8D25B8002BE07C /* AppDelegate.m */,
 				24DAEF0F1C8D25B8002BE07C /* ViewController.h */,
 				24DAEF101C8D25B8002BE07C /* ViewController.m */,
 				24DAEF121C8D25B8002BE07C /* Main.storyboard */,
+				24DAEF311C8DA8D5002BE07C /* subStringFromString.h */,
+				24DAEF321C8DA8D5002BE07C /* subStringFromString.m */,
+				24DAEF2B1C8DA085002BE07C /* NSString+TSZSubStringWithChar.h */,
+				24DAEF2C1C8DA085002BE07C /* NSString+TSZSubStringWithChar.m */,
 				24DAEF151C8D25B8002BE07C /* Assets.xcassets */,
 				24DAEF171C8D25B8002BE07C /* LaunchScreen.storyboard */,
 				24DAEF1A1C8D25B8002BE07C /* Info.plist */,
@@ -154,8 +174,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DAEF111C8D25B8002BE07C /* ViewController.m in Sources */,
+				24DAEF2D1C8DA085002BE07C /* NSString+TSZSubStringWithChar.m in Sources */,
+				24DAEF261C8D91CF002BE07C /* TSZLinkedInModel.m in Sources */,
+				24DAEF331C8DA8D5002BE07C /* subStringFromString.m in Sources */,
 				24DAEF0E1C8D25B8002BE07C /* AppDelegate.m in Sources */,
 				24DAEF0B1C8D25B8002BE07C /* main.m in Sources */,
+				24DAEF291C8D933D002BE07C /* TSZSiteRequestModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
