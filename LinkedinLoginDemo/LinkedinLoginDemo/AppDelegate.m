@@ -48,6 +48,8 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     
     
+     NSLog(@"%s url=%@","app delegate application openURL called ", [NSString stringWithFormat:@"%@" , url]);
+    
     if([LISDKCallbackHandler shouldHandleUrl:url]){
         
         return [LISDKCallbackHandler  application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
