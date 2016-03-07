@@ -13,6 +13,7 @@
 		24DAEF141C8D25B8002BE07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DAEF121C8D25B8002BE07C /* Main.storyboard */; };
 		24DAEF161C8D25B8002BE07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DAEF151C8D25B8002BE07C /* Assets.xcassets */; };
 		24DAEF191C8D25B8002BE07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DAEF171C8D25B8002BE07C /* LaunchScreen.storyboard */; };
+		24DAEF211C8D30BB002BE07C /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DAEF201C8D30BB002BE07C /* linkedin-sdk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		24DAEF151C8D25B8002BE07C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24DAEF181C8D25B8002BE07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24DAEF1A1C8D25B8002BE07C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24DAEF201C8D30BB002BE07C /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DAEF211C8D30BB002BE07C /* linkedin-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		24DAEEFD1C8D25B8002BE07C = {
 			isa = PBXGroup;
 			children = (
+				24DAEF201C8D30BB002BE07C /* linkedin-sdk.framework */,
 				24DAEF081C8D25B8002BE07C /* LinkedinLoginDemo */,
 				24DAEF071C8D25B8002BE07C /* Products */,
 			);
@@ -263,6 +267,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LinkedinLoginDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobao.LinkedinLoginDemo;
@@ -274,6 +282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LinkedinLoginDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobao.LinkedinLoginDemo;
