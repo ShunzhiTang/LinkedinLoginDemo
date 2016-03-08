@@ -296,6 +296,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LinkedinLoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobao.LinkedinLoginDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -311,6 +312,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LinkedinLoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobao.LinkedinLoginDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +338,7 @@
 				24DAEF1F1C8D25B8002BE07C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

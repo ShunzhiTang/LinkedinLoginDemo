@@ -28,16 +28,42 @@
                                     <action selector="linkedInLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kim-ZI-dIF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BS-om-La1">
+                                <rect key="frame" x="231" y="335" width="139" height="36"/>
+                                <color key="backgroundColor" red="0.42597881910000002" green="0.51721541260000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="ahI-Ls-SDh"/>
+                                    <constraint firstAttribute="width" constant="139" id="j8K-2M-2EG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Share  LinkedIn">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickShareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8b-CM-LcE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2BS-om-La1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3N5-2J-2Kt"/>
                             <constraint firstItem="nhE-Lk-DhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-62" id="3Sm-6f-BNk"/>
+                            <constraint firstItem="2BS-om-La1" firstAttribute="top" secondItem="nhE-Lk-DhF" secondAttribute="bottom" constant="77" id="LfA-XI-qZZ"/>
+                            <constraint firstItem="2BS-om-La1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5D-aC-EaZ"/>
+                            <constraint firstItem="2BS-om-La1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ory-t8-Yec"/>
                             <constraint firstItem="nhE-Lk-DhF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-25" id="vy1-A2-Yrj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3N5-2J-2Kt"/>
+                                <exclude reference="ory-t8-Yec"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="403" y="267"/>
         </scene>
     </scenes>
     <resources>
