@@ -45,14 +45,14 @@
 	</array>
     
     <key>LIAppId</key>
-    <string>4774081</string>
+    <string>LIAppId</string>
     
     <key>CFBundleURLTypes</key>
     <array>
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>li4774081</string>
+                <string>liLIAppId</string>
             </array>
         </dict>
     </array>
