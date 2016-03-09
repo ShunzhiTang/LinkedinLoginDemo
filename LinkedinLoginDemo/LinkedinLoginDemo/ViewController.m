@@ -167,6 +167,16 @@
 //        NSLog(@"%@" , error);
 //    }];
     
+    
+    
+//    NSURL * myURL_APP_A = [NSURL URLWithString:@"LinkedinLoginDemo://www.bdsa"];
+//    
+//    if ([[UIApplication sharedApplication] canOpenURL:myURL_APP_A]) {
+//        NSLog(@"canOpenURL");
+//        
+//        [[UIApplication sharedApplication] openURL:myURL_APP_A ];
+//    }
+    
      [self shareLinked];
     
 }

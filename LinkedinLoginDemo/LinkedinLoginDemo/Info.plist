@@ -80,6 +80,12 @@
             </dict>
         </dict>
 
+
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>LinkedinLoginDemo</string>
+</array>
+
 </dict>
 
 
