@@ -59,6 +59,14 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+    
+    NSURL *instagramURL = [NSURL URLWithString:@"instagram://location?id=1"];
+    if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
+        [[UIApplication sharedApplication] openURL:instagramURL];
+    }  
 
+    return YES;
+}
 
 @end

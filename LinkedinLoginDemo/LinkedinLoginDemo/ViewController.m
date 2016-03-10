@@ -258,4 +258,18 @@
     return [paramtersArray componentsJoinedByString:@"&"];
 }
 
+- (IBAction)clickInstagramBtn:(id)sender {
+    
+//    NSURL *instagramURL = [NSURL URLWithString:@"instagram://location?id=1"];
+//    if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
+//        [[UIApplication sharedApplication] openURL:instagramURL];
+//}
+  
+    NSLog(@"instagram ");
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/"]];
+    
+}
+
+
+
 @end

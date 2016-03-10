@@ -43,15 +43,28 @@
                                     <action selector="clickShareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8b-CM-LcE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN6-eE-bSr">
+                                <rect key="frame" x="243" y="458" width="115" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lNt-Jy-Gt0"/>
+                                    <constraint firstAttribute="width" constant="115" id="y0a-wv-HgJ"/>
+                                </constraints>
+                                <state key="normal" title="instagram  open "/>
+                                <connections>
+                                    <action selector="clickInstagramBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vp-st-n4A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2BS-om-La1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3N5-2J-2Kt"/>
                             <constraint firstItem="nhE-Lk-DhF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-62" id="3Sm-6f-BNk"/>
+                            <constraint firstItem="JN6-eE-bSr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="86p-Td-wFf"/>
                             <constraint firstItem="2BS-om-La1" firstAttribute="top" secondItem="nhE-Lk-DhF" secondAttribute="bottom" constant="77" id="LfA-XI-qZZ"/>
                             <constraint firstItem="2BS-om-La1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q5D-aC-EaZ"/>
                             <constraint firstItem="2BS-om-La1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ory-t8-Yec"/>
                             <constraint firstItem="nhE-Lk-DhF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-25" id="vy1-A2-Yrj"/>
+                            <constraint firstItem="JN6-eE-bSr" firstAttribute="top" secondItem="2BS-om-La1" secondAttribute="bottom" constant="87" id="xZp-aj-b0L"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
