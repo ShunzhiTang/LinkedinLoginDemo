@@ -265,8 +265,26 @@
 //        [[UIApplication sharedApplication] openURL:instagramURL];
 //}
   
-    NSLog(@"instagram ");
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/"]];
+//    NSLog(@"instagram ");
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/"]];
+    
+        NSURL *instagramURL = [NSURL URLWithString:@"instagram://location?id=1"];
+        if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
+            [[UIApplication sharedApplication] openURL:instagramURL];
+        }
+    //
+    //
+}
+
+
+- (IBAction)clickWhatsAppBtn:(id)sender {
+    NSLog(@"whatsApp ");
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://instagram.com/"]];
+    
+    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?text=Hello%2C%20World!"];
+        if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
+            [[UIApplication sharedApplication] openURL: whatsappURL];
+        }
     
 }
 
