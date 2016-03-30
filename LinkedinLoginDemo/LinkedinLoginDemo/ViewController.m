@@ -8,16 +8,16 @@
 
 #import "ViewController.h"
 #import <linkedin-sdk/LISDK.h>
-#import "TSZSiteRequestModel.h"
+#import "CBSiteRequestModel.h"
 
-#import "TSZLinkedInModel.h"
+#import "CBLinkedInModel.h"
 #import "subStringFromString.h"
 //#import "JSONKit.h"
 @interface ViewController ()
 
-@property (nonatomic ,strong) TSZLinkedInModel *linkedModel;
+@property (nonatomic ,strong) CBLinkedInModel *linkedModel;
 
-@property (nonatomic ,strong) TSZSiteRequestModel *resquestModel;
+@property (nonatomic ,strong) CBSiteRequestModel *resquestModel;
 
 @end
 
@@ -53,7 +53,7 @@
         
 //
         
-        LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
+//        LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
 //
 //         NSLog(@"value=%@ isvalid=%@",[session value],[session isValid] ? @"YES" : @"NO");
 //        
@@ -118,14 +118,14 @@
                                                 
                                                 NSDictionary *dict = (NSDictionary *)obj;
                                                 
-                                                self.linkedModel = [[TSZLinkedInModel alloc]initWithLinkedinModelDict:dict];
+                                                self.linkedModel = [[CBLinkedInModel alloc]initWithLinkedinModelDict:dict];
                                                 
                                                 
 //                                                self.resquestModel = self.linkedModel.siteStandardProfileRequest;
                                                 
                                                 NSDictionary  *dictRes= (NSDictionary *) self.linkedModel.siteStandardProfileRequest;
                                                 
-                                                self.resquestModel = [[TSZSiteRequestModel alloc] initWithTSZSiteModelDict:dictRes];
+                                                self.resquestModel = [[CBSiteRequestModel alloc] initWithTSZSiteModelDict:dictRes];
                                                 
                                                 
                                                 self.linkedModel.siteStandardProfileRequest = self.resquestModel;
@@ -258,6 +258,7 @@
     return [paramtersArray componentsJoinedByString:@"&"];
 }
 
+
 - (IBAction)clickInstagramBtn:(id)sender {
     
 //    NSURL *instagramURL = [NSURL URLWithString:@"instagram://location?id=1"];
@@ -272,8 +273,7 @@
         if ([[UIApplication sharedApplication] canOpenURL:instagramURL]) {
             [[UIApplication sharedApplication] openURL:instagramURL];
         }
-    //
-    //
+    
 }
 
 
@@ -285,7 +285,6 @@
         if ([[UIApplication sharedApplication] canOpenURL: whatsappURL]) {
             [[UIApplication sharedApplication] openURL: whatsappURL];
         }
-    
 }
 
 

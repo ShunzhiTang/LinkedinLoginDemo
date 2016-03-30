@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TSZSiteRequestModel.h"
+#import "CBSiteRequestModel.h"
 
 
-@interface TSZLinkedInModel : NSObject
+@interface CBLinkedInModel : NSObject
 
 /**
  firstName  第一个名字
@@ -38,7 +38,7 @@
  siteStandardProfileRequest 这个得到的数据的模型
  
  */
-@property (nonatomic ,strong) TSZSiteRequestModel *siteStandardProfileRequest;
+@property (nonatomic ,strong) CBSiteRequestModel *siteStandardProfileRequest;
 
 
 /**

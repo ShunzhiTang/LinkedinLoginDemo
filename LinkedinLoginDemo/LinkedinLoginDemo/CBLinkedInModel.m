@@ -6,9 +6,9 @@
 //  Copyright © 2016年 shunzhitang. All rights reserved.
 //
 
-#import "TSZLinkedInModel.h"
+#import "CBLinkedInModel.h"
 
-@implementation TSZLinkedInModel
+@implementation CBLinkedInModel
 
 /**
  类方法实现

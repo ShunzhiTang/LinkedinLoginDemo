@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TSZSiteRequestModel : NSObject
+@interface CBSiteRequestModel : NSObject
 
 /**
  url  linked iN的个人中心

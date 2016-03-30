@@ -6,9 +6,9 @@
 //  Copyright © 2016年 shunzhitang. All rights reserved.
 //
 
-#import "TSZSiteRequestModel.h"
+#import "CBSiteRequestModel.h"
 
-@implementation TSZSiteRequestModel
+@implementation CBSiteRequestModel
 
 /**
  工厂模式的 类方法
